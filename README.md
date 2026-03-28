@@ -4,7 +4,7 @@ Multi-project support infrastructure for the InteTeam platform. Provides self-se
 
 ## Problem
 
-500+ repair shops using InteTeam CRM (and growing). Each shop has staff turnover. New hires need onboarding. Features like barcode scanning, label printing, booking workflows, inventory management are not self-explanatory. Manual onboarding and ad-hoc support doesn't scale. As the platform expands (CRM, SSO, Panel, future apps), the support burden multiplies.
+InteTeam CRM is a multi-tenant repair management platform targeting 500+ repair shops. We're just starting out with several drop-off points now, but as the platform grows, each new shop means more staff to onboard. Features like barcode scanning, label printing, booking workflows, and inventory management are not self-explanatory. Manual onboarding and ad-hoc support won't scale. As the platform expands (CRM, SSO, Panel, future apps), the support burden multiplies.
 
 ## Solution
 
@@ -28,7 +28,7 @@ When RAG can't answer or the user has a bug/problem, escalate to a ticket. Integ
 
 | App | Repo | Status | Purpose |
 |-----|------|--------|---------|
-| InteTeam CRM | `inteteam_crm` | Production | Multi-tenant repair management (500+ shops) |
+| InteTeam CRM | `inteteam_crm` | Production | Multi-tenant repair management (targeting 500+ shops) |
 | InteTeam SSO | `inteteam_sso` | In Development | Single sign-on across all InteTeam apps |
 | InteTeam Panel | `inteteam-panel` | Production | Hosting control panel |
 | InteTeam CMS | `inteteam_cms` | Production | Content management — will host the user manual |
