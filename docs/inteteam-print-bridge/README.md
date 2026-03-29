@@ -14,7 +14,7 @@ Setup and troubleshooting guide for the local print bridge agent. This is the mo
 |---------|-------------|
 | Windows setup (.exe) | Download, configure .env, run, auto-start |
 | Linux setup (systemd) | install/setup.sh, Docker alternative |
-| Printer configuration | Finding printer IP, USB path, choosing driver |
+| Printer configuration | Finding printer IP, USB path, choosing driver (zebra_zpl, zing_raster, brother_ql, cups, raw_tcp) |
 | Troubleshooting | Station offline, job stuck, USB/network errors |
 | Updating | How to update to new versions |
 

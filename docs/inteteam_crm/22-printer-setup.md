@@ -40,6 +40,7 @@ The station will show a **red dot** (offline) until the Print Bridge connects.
 | Driver | Use for | Notes |
 |--------|---------|-------|
 | **zebra_zpl** | Zebra printers (ZD230, ZD420, etc.) | Generates ZPL commands. Best for Zebra. Use LAN connection. |
+| **zing_raster** | Zing / RONGTA thermal label printers | Converts images to ZPL raster graphics. Works via USB or LAN. |
 | **brother_ql** | Brother P-touch (P900W, P750W) | Direct raster protocol. Works via USB or LAN. |
 | **cups** | Any printer configured in CUPS (Linux) | Recommended for Brother on Linux — most reliable. |
 | **raw_tcp** | Any network printer on port 9100 | Generic. Sends data as-is. |
@@ -98,3 +99,4 @@ You can cancel pending jobs from this page.
 In the **Label Options** card:
 
 - **Show ID on label** — when ON, prints human-readable text (e.g. "BK-001234") below the barcode. When OFF, prints barcode only.
+- **Show company name** — when ON, prints the company name on the label below the ID. Useful when multiple businesses share a printer or stock area.

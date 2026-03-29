@@ -36,13 +36,15 @@ The default is 1 copy. If you need multiples, the Print Label button supports se
 
 - A **barcode** (CODE_128 format by default) encoding the reference/SKU/MPN
 - Optionally, **human-readable text** below the barcode showing the value in plain text
+- Optionally, the **company name** below the ID
 
-To toggle the human-readable text on/off:
+To configure what appears on labels:
 1. Go to **Settings -> Hardware tab -> Printing**
 2. Find the **Label Options** card
-3. Toggle **Show ID on label**
+3. **Show ID on label** — toggle to show/hide the human-readable text (e.g. "BK-001234")
+4. **Show company name** — toggle to show/hide the company name on the label. Useful when multiple businesses share a printer or stock area.
 
-This applies to all labels printed by your company.
+These apply to all labels printed by your company.
 
 ---
 
