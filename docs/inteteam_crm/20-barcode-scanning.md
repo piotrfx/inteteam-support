@@ -98,3 +98,11 @@ A separate **clipboard icon** button sits next to the barcode scanner icon in th
 5. Paste the value wherever you need it (serial number field, notes, etc.)
 
 Available for both **Admin** and **Team** roles.
+
+### Can't Scan? Read Text Instead
+
+If the barcode is too small, damaged, or the serial number is printed as plain text (no barcode), tap **"Can't scan? Read text instead"** while the camera is open.
+
+The system captures the image and uses text recognition (OCR) to read printed text. Detected lines appear as tappable buttons — tap any line to copy it to your clipboard.
+
+Works well for serial numbers, IMEI, model numbers on devices like PlayStation, laptops, phones, etc.
