@@ -56,3 +56,23 @@ When you scan a barcode, the system searches in this order (first match wins):
 | 5 | Inventory item SKU | Inventory item page |
 
 If the barcode doesn't match any of these, you'll see a "No matching item found" message.
+
+---
+
+## Team / Technician Scanning
+
+Team members (technicians) can scan barcodes using the same camera and physical scanner methods. The behaviour differs based on assignment:
+
+- **Assigned to the booking:** You're taken to the booking page with a **Mark as Received** button. Tapping it logs a receipt confirmation in the audit trail (no status change — your shop's custom statuses are unaffected).
+- **Not assigned:** A message appears: *"You're not assigned to this booking. Contact your team lead if you think that's a mistake."*
+- **Non-booking items** (orders, parts, inventory): Team members see *"You don't have access to this item."*
+
+### Mark as Received
+
+When a technician scans a booking they're assigned to and taps **Mark as Received**, the system:
+
+1. Creates an audit log entry: *"Received by [Name]"*
+2. Shows a success toast confirmation
+3. Does **not** change the booking stage or status
+
+This gives shop owners a clear record of when technicians acknowledged each job, without interfering with custom workflows.
