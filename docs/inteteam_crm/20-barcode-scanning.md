@@ -76,3 +76,25 @@ When a technician scans a booking they're assigned to and taps **Mark as Receive
 3. Does **not** change the booking stage or status
 
 This gives shop owners a clear record of when technicians acknowledged each job, without interfering with custom workflows.
+
+---
+
+## Scan to Copy (Serial Numbers, IMEI, etc.)
+
+A separate **clipboard icon** button sits next to the barcode scanner icon in the navigation bar. Use it to scan any barcode and copy the value to your clipboard — no database lookup, just a quick capture.
+
+### When to Use
+
+- Scanning a **serial number** off a device (laptop, PS5, phone, etc.)
+- Capturing an **IMEI**, model number, or manufacturer barcode
+- Any time you need to read a barcode and paste the value into a form field
+
+### How to Use
+
+1. Tap the **clipboard icon** in the top-right navigation bar
+2. Point your camera at the barcode
+3. The scanned value appears on screen and is **automatically copied to your clipboard**
+4. Tap **Copy** again if needed, or **Scan Again** for another barcode
+5. Paste the value wherever you need it (serial number field, notes, etc.)
+
+Available for both **Admin** and **Team** roles.
