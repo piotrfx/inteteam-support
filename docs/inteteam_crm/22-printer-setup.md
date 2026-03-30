@@ -135,18 +135,24 @@ For setting up a Zebra USB printer on a new Windows laptop:
 
 So the bridge runs automatically when the laptop turns on:
 
-1. Press `Win + R`, type `shell:startup`, press Enter
-2. Right-click in the folder > **New > Shortcut**
-3. For the target, enter:
+> **Important:** Do NOT put the full command in a Windows shortcut target — it has a 260-character limit and will silently fail. Use a `.bat` file instead.
+
+1. Create a file called `start-bridge.bat` in the bridge folder (e.g. `C:\inteteam_crm_print_bridge\start-bridge.bat`) with this content:
+   ```bat
+   @echo off
+   cd /d "C:\inteteam_crm_print_bridge"
+   inteteam-print-bridge.exe start --api-url https://crm.bookrepaironline.co.uk --token st_YOUR_TOKEN --interval 20000
    ```
-   cmd /c start /min "" "C:\PrintBridge\inteteam-print-bridge.exe" start --api-url https://crm.bookrepaironline.co.uk --token st_YOUR_TOKEN --interval 10000
-   ```
-4. Name it **InteTeam Print Bridge**
-5. Restart the laptop to verify — the bridge starts minimised in the background
+   **The command must be on a single line** — do not split it across multiple lines.
+
+2. Press `Win + R`, type `shell:startup`, press Enter
+3. Copy `start-bridge.bat` into the Startup folder
+
+That's it — Windows runs everything in the Startup folder on login.
 
 ### Verify Auto-Start
 
 After reboot:
 - The CRM station should show a **green dot** (online)
 - Send a test print — it should work without manually starting anything
-- If the green dot doesn't appear, check the shortcut path is correct
+- If the green dot doesn't appear, open the `.bat` file manually to check for errors
