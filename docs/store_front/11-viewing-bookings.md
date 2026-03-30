@@ -12,7 +12,7 @@ Your bookings are displayed as cards, each showing:
 
 | Field | What It Shows |
 |-------|---------------|
-| **Reference** | Your booking reference (e.g. REF-A7B3X9) |
+| **Reference** | Your booking reference (e.g. INT-001/03-2026) |
 | **Device/Issue** | The device type or problem description |
 | **Stage** | Coloured badge showing current status |
 | **Date** | When the booking was created |
@@ -48,7 +48,7 @@ Click any booking card to see the full details:
 
 ### What You See
 
-- **Reference** — your booking reference and any internal booking number
+- **Reference** — your booking reference (e.g. INT-001/03-2026)
 - **Stage** — current status badge
 - **Device** — what device was booked in
 - **Issue** — the problem that was reported

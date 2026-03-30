@@ -18,7 +18,7 @@ A list of your most recent repair bookings, showing:
 
 | Column | What It Shows |
 |--------|---------------|
-| **Reference** | Your booking reference number (e.g. REF-A7B3X9) |
+| **Reference** | Your booking reference number (e.g. INT-001/03-2026) |
 | **Device/Issue** | What device or problem was reported |
 | **Stage** | Current status badge — Incoming, Undergoing, or Completed |
 | **Date** | When the booking was created |

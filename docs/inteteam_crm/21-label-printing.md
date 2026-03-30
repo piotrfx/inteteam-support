@@ -10,7 +10,7 @@ The **Print Label** button appears on these pages:
 
 | Page | What's printed on the label |
 |------|---------------------------|
-| **Booking detail** (`/admin/bookings/{id}`) | Booking reference (e.g. BK-001234) |
+| **Booking detail** (`/admin/bookings/{id}`) | Booking reference (e.g. INT-001/03-2026) |
 | **Storefront order** (`/admin/storefront/orders/{id}`) | Order reference |
 | **Part detail** (`/inventory/parts-stock/parts/{id}`) | Part MPN (manufacturer part number) |
 | **Inventory item** (`/warehouse/inventory/{id}`) | Item SKU |

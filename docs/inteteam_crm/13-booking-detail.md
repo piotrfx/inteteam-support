@@ -8,7 +8,7 @@ Click any booking ID to open its detail page. Everything about a single booking 
 
 At the top you'll see:
 
-- **Booking reference** (e.g. BK-001234) and custom ID
+- **Booking reference** (e.g. INT-001/03-2026)
 - **Stage badge** — Incoming / Undergoing / Completed
 - **Status dropdown** — click to change the current status
 - **Print Label button** — prints a barcode label for this booking (see [Printing Labels](21-label-printing.md))
