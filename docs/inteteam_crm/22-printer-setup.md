@@ -32,24 +32,34 @@ The station will show a **red dot** (offline) until the Print Bridge connects.
 | **Name** | A friendly name (e.g. "Zebra ZD230", "Brother P900W") |
 | **Driver** | See table below |
 | **Connection** | `lan` (network) or `usb` (direct USB cable) |
-| **Address** | Printer's IP and port (e.g. `192.168.1.100:9100`) or USB path (e.g. `/dev/usb/lp0`) |
+| **Address** | Printer's IP and port (e.g. `192.168.1.100:9100`), USB path (Linux: `/dev/usb/lp0`), or Windows printer share name (e.g. `ZDesigner ZD230-203dpi ZPL`) |
 | **Default** | Toggle ON if this is your main printer |
 
 ### Choosing a Driver
 
 | Driver | Use for | Notes |
 |--------|---------|-------|
-| **zebra_zpl** | Zebra printers (ZD230, ZD420, etc.) | Generates ZPL commands. Best for Zebra. Use LAN connection. |
+| **zebra_zpl** | Zebra printers (ZD230, ZD420, etc.) | Generates ZPL commands. Best for Zebra. Works via LAN or USB (Windows shared printer). |
 | **zing_raster** | Zing / RONGTA thermal label printers | Converts images to ZPL raster graphics. Works via USB or LAN. |
 | **brother_ql** | Brother P-touch (P900W, P750W) | Direct raster protocol. Works via USB or LAN. |
 | **cups** | Any printer configured in CUPS (Linux) | Recommended for Brother on Linux — most reliable. |
 | **raw_tcp** | Any network printer on port 9100 | Generic. Sends data as-is. |
 
-### Finding Your Printer's IP Address
+### Finding Your Printer Address
 
+**Network printers (LAN):**
 - **Zebra:** Check the printer's display menu, or print a network config label
 - **Brother:** Press and hold the Wi-Fi button to print network info
 - **Router:** Check your router's DHCP client list for the printer's name
+
+**USB printers on Windows:**
+- Open PowerShell and run: `Get-Printer | Select-Object Name`
+- Use the exact name shown (e.g. `ZDesigner ZD230-203dpi ZPL`)
+- The printer must be **shared** — go to Printer properties > Sharing > tick "Share this printer"
+
+**USB printers on Linux:**
+- Run: `lpstat -p` to see CUPS printer names
+- Or check USB device path: `ls /dev/usb/lp*`
 
 3. Click **Save**
 
@@ -100,3 +110,43 @@ In the **Label Options** card:
 
 - **Show ID on label** — when ON, prints human-readable text (e.g. "BK-001234") below the barcode. When OFF, prints barcode only.
 - **Show company name** — when ON, prints the company name on the label below the ID. Useful when multiple businesses share a printer or stock area.
+
+---
+
+## Windows USB Quick Setup Checklist
+
+For setting up a Zebra USB printer on a new Windows laptop:
+
+1. [ ] Plug in the Zebra printer via USB — Windows should auto-install the driver
+2. [ ] Open PowerShell, run `Get-Printer` to confirm the printer name
+3. [ ] Right-click the printer in Settings > Printers > Properties > Sharing > **Share this printer**
+4. [ ] In CRM: create a **new station** (Settings > Hardware > Printing > Add Station)
+5. [ ] Copy the station **token** (shown once)
+6. [ ] Add a **printer** to the station: Driver = Zebra ZPL, Connection = USB, Address = the exact printer name from step 2
+7. [ ] Copy `inteteam-print-bridge.exe` to the laptop (e.g. `C:\PrintBridge\`)
+8. [ ] Test from PowerShell:
+   ```powershell
+   .\inteteam-print-bridge.exe start --api-url https://crm.bookrepaironline.co.uk --token st_YOUR_TOKEN --interval 10000
+   ```
+9. [ ] Send a test print from the CRM — label should print
+10. [ ] Set up **auto-start** (see below)
+
+### Auto-Start on Windows Boot
+
+So the bridge runs automatically when the laptop turns on:
+
+1. Press `Win + R`, type `shell:startup`, press Enter
+2. Right-click in the folder > **New > Shortcut**
+3. For the target, enter:
+   ```
+   cmd /c start /min "" "C:\PrintBridge\inteteam-print-bridge.exe" start --api-url https://crm.bookrepaironline.co.uk --token st_YOUR_TOKEN --interval 10000
+   ```
+4. Name it **InteTeam Print Bridge**
+5. Restart the laptop to verify — the bridge starts minimised in the background
+
+### Verify Auto-Start
+
+After reboot:
+- The CRM station should show a **green dot** (online)
+- Send a test print — it should work without manually starting anything
+- If the green dot doesn't appear, check the shortcut path is correct

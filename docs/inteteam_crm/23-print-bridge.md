@@ -17,20 +17,24 @@ You need:
 
 ### Option A: Standalone .exe (easiest — no installation needed)
 
-1. Download the `inteteam-print-bridge-win64.zip` from your admin
-2. Unzip to any folder (e.g. `C:\PrintBridge\`)
-3. Rename `.env.example` to `.env`
-4. Open `.env` in Notepad and set:
+1. Download `inteteam-print-bridge.exe` from your admin
+2. Copy it to a folder (e.g. `C:\PrintBridge\`)
+3. Open **PowerShell** in that folder and run:
+   ```powershell
+   .\inteteam-print-bridge.exe start --api-url https://your-crm-url.com --token st_your_token_here --interval 10000
    ```
-   INTETEAM_API_URL=https://your-crm-url.com
-   INTETEAM_STATION_TOKEN=st_your_token_here
-   ```
-5. Double-click `inteteam-print-bridge.exe`
-6. A console window opens showing "Polling..." — this means it's working
+4. You should see "Print bridge started" and "Poll interval: 10000ms"
+5. Send a test print from the CRM to verify
 
-**To auto-start on boot:**
-- Press `Win+R`, type `shell:startup`, press Enter
-- Create a shortcut to the `.exe` in this folder
+**To auto-start on boot (recommended):**
+1. Press `Win + R`, type `shell:startup`, press Enter
+2. Right-click > **New > Shortcut**
+3. Target:
+   ```
+   cmd /c start /min "" "C:\PrintBridge\inteteam-print-bridge.exe" start --api-url https://your-crm-url.com --token st_your_token_here --interval 10000
+   ```
+4. Name it **InteTeam Print Bridge**
+5. The bridge will start minimised on every boot — no action needed from the user
 
 ### Option B: With Node.js
 
@@ -43,7 +47,7 @@ copy .env.example .env
 npx tsx bin/bridge.ts start
 ```
 
-**Note:** For USB printers on Windows, use the printer's network IP instead of USB path. Find the IP in the printer settings or your router's DHCP table.
+**Note:** For USB printers on Windows, the bridge auto-detects Windows and prints via the shared printer name. Make sure the printer is **shared** (Printer properties > Sharing > tick "Share this printer"). See [Printer Setup](22-printer-setup.md) for details.
 
 ---
 
@@ -114,6 +118,12 @@ npx tsx bin/bridge.ts start
 - Printer is off or IP changed
 - Check the printer's IP on its display or router DHCP
 - Test connectivity: try pinging the printer IP
+
+### Print fails with "network name cannot be found" (Windows)
+- The printer share name in the CRM doesn't match the actual Windows printer name
+- Open PowerShell, run `Get-Printer | Select-Object Name, ShareName, Shared`
+- Make sure the printer is **shared** (Shared = True)
+- Update the CRM address to match the exact share name
 
 ### Labels print but look wrong
 - Check the printer driver is correct (Zebra needs `zebra_zpl`, Brother needs `cups` or `brother_ql`)
