@@ -70,3 +70,46 @@ For more detailed stock tracking with movement history, use the **Warehouse Inve
 2. Confirm the deletion
 
 Deleted products are removed from your storefront immediately.
+
+---
+
+## Exporting Products
+
+Click the **Export** button at the top of the products page to download a CSV file of all your products. The CSV includes: name, MPN, category, manufacturer, description, sell price, quantity, and storefront listing status.
+
+Use the exported file as a template for bulk imports — add more rows in the same format and re-import.
+
+---
+
+## Importing Products
+
+Click the **Import** button to open the import wizard.
+
+### Step 1: Upload
+
+Upload a CSV or Excel file (max 10MB). You can use your own spreadsheet format — you don't have to match our columns exactly.
+
+**Tip:** Create one product manually first, then Export it. Use that CSV as your template.
+
+### Step 2: Map columns
+
+Match your spreadsheet columns to product fields. The system auto-suggests mappings for common column names (e.g. "Title" → Name, "Selling Price" → Sell Price).
+
+- **Name** and **Sell Price** must be mapped (required)
+- Columns mapped to "Save as product spec" are stored as extra product data
+- Columns mapped to "Skip" are ignored
+- Set a **default quantity** for rows without a quantity column
+
+### Step 3: Review
+
+Before importing, you'll see:
+- A preview of the first 10 rows
+- Count of new products, duplicates, and errors
+- Any new categories that will be created automatically
+- For duplicates: choose to **skip** them or **update** existing products
+
+### Step 4: Import
+
+- Small imports (under 50 products) process instantly
+- Large imports run in the background — a progress bar shows completion
+- When done, you'll see a summary: how many were created, updated, skipped, and any errors
