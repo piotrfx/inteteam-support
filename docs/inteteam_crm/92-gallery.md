@@ -2,7 +2,7 @@
 
 Create image galleries to showcase your work, products, or shop.
 
-**CMS -> Gallery**, or navigate to `/admin/galleries`
+**Business -> CMS -> Gallery**, or navigate to `/admin/galleries`
 
 ---
 

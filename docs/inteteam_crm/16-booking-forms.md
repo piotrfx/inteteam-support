@@ -27,7 +27,7 @@ The forms index page shows all your booking forms with:
 ## Creating a Form
 
 1. Click **Create Form**
-2. Choose a **custom form** (built in CMS -> Forms) — this defines the fields
+2. Choose a **custom form** (built in Business -> CMS -> Forms) — this defines the fields
 3. Choose a **location** — where the booking will be assigned
 4. Give the form a name and description
 5. Save
@@ -63,6 +63,6 @@ Changes apply immediately — the embed code stays the same.
 
 ## Custom Form Builder
 
-The actual form fields are built in **CMS -> Forms**. That's where you design what questions customers answer (text fields, dropdowns, checkboxes, etc.). The booking form links to one of these CMS forms.
+The actual form fields are built in **Business -> CMS -> Forms**. That's where you design what questions customers answer (text fields, dropdowns, checkboxes, etc.). The booking form links to one of these CMS forms.
 
 See [CMS Forms](91-cms-forms.md) for how to build custom forms.

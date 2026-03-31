@@ -2,7 +2,7 @@
 
 Build custom forms for your website — contact forms, booking intake forms, enquiry forms.
 
-**CMS -> Forms**, or navigate to `/cms/forms`
+**Business -> CMS -> Forms**, or navigate to `/cms/forms`
 
 ---
 

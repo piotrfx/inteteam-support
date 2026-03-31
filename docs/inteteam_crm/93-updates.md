@@ -2,7 +2,7 @@
 
 Publish news and updates for your customers.
 
-**CMS -> Updates**, or navigate to `/cms/updates`
+**Business -> CMS -> Updates**, or navigate to `/cms/updates`
 
 ---
 

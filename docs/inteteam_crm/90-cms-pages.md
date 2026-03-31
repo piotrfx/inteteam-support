@@ -2,7 +2,7 @@
 
 Create and manage content pages for your website (Privacy Policy, Terms & Conditions, custom pages).
 
-**CMS -> Pages**, or navigate to `/admin/cms-pages`
+**Business -> CMS -> Pages**, or navigate to `/admin/cms-pages`
 
 ---
 

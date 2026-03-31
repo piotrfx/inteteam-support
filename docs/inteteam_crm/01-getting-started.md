@@ -77,24 +77,28 @@ The top navigation bar is always visible. Here's what each section contains:
 
 ### Dropdown Menus
 
-**CMS** — Your website content:
-- Forms, Pages, Updates, Gallery, Footer, About
-
 **Bookings** — The core repair workflow:
 - Incoming, Undergoing, Completed, Settings
 
 **Business** — Everything else (two-column menu):
 - *Left column:* Tasks, Invoices, Payments, Reports, Team
-- *Right column:* Warehouse, Parts & Stock, Storefront
+- *Right column (top):* Warehouse, Parts & Stock, Storefront
+- *Right column (below divider):* CMS — Forms, Pages, Updates, Gallery, Footer, About
+
+**Recent** — Quick access to pages you've visited recently:
+- Shows your last visited pages (up to 20, 5 per page)
+- Use the arrow buttons at the bottom to page through older entries
+- Stored in your browser — no data leaves your device
 
 ### Right Side Icons
 
 | Icon | What it does |
 |------|-------------|
 | **Barcode scanner** (barcode icon) | Opens the camera barcode scanner — scan a label to jump to that booking/item |
+| **Copy scanner** (copy icon) | Opens the scanner in copy-to-clipboard mode |
 | **Notification bell** | Shows unread notifications |
 | **Your avatar** | Profile settings, theme, logout |
 
 ### On Mobile
 
-On phones and tablets, the menu collapses into a **hamburger menu** (three lines icon) on the left. Tap it to open the full navigation. The barcode scanner, notification bell, and user menu remain visible at all times.
+On phones and tablets, the menu collapses into a **hamburger menu** (three lines icon) on the left. Tap it to open the full navigation including Recent. The barcode scanner, notification bell, and user menu remain visible at all times.
