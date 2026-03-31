@@ -32,11 +32,39 @@ The default is 1 copy. If you need multiples, the Print Label button supports se
 
 ---
 
+## Batch Printing (Label Batches)
+
+Pre-print barcode labels in bulk for drop-off points and other uses.
+
+**Settings -> Hardware tab -> Label Batches**, or navigate to `/admin/settings/label-batches`
+
+### Creating a Batch
+
+1. Click **Create Batch**
+2. Enter a **prefix** (e.g. PETZONE), **range** (1–100), and **year**
+3. Optionally add up to 3 lines of **custom text** (max 40 characters per line) — this appears below the barcode on every label in the batch
+4. Click **Create Batch**
+
+### Printing a Batch
+
+1. Find the batch in the list and click **Print**
+2. A confirmation dialog shows the batch name, label count, and estimated print time
+3. Click **Start Printing** to begin
+
+Labels print one at a time with short pauses between each. Larger batches take longer.
+
+### Filtering Batches
+
+Use the **search box** to filter by prefix, or the **status dropdown** to filter by created/printed/printing/failed.
+
+---
+
 ## What's on the Label
 
 - A **barcode** (CODE_128 format by default) encoding the reference/SKU/MPN
 - Optionally, **human-readable text** below the barcode showing the value in plain text
 - Optionally, the **company name** below the ID
+- Optionally, up to **3 lines of custom text** (set per batch when creating label batches)
 
 To configure what appears on labels:
 1. Go to **Settings -> Hardware tab -> Printing**
@@ -44,7 +72,7 @@ To configure what appears on labels:
 3. **Show ID on label** — toggle to show/hide the human-readable text (e.g. "BK-001234")
 4. **Show company name** — toggle to show/hide the company name on the label. Useful when multiple businesses share a printer or stock area.
 
-These apply to all labels printed by your company.
+These apply to all labels printed by your company. Custom text is set per batch during batch creation.
 
 ---
 
