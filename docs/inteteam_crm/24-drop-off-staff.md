@@ -24,7 +24,7 @@ Your dashboard shows:
 | **Ready for collection** | Number of repaired items waiting for customers to pick up |
 | **Scan & Receive** | Quick button to go to the receive page |
 
-Below the stats, you'll see a list of today's expected customers with their name, email, phone, and device type.
+Below the stats, you'll see a list of today's expected customers with their name and booking reference. This list only shows customers with visits scheduled for today — not all incoming bookings.
 
 ---
 
@@ -34,9 +34,13 @@ When a customer arrives with a device:
 
 1. Go to **Receive** (from the navbar or dashboard button)
 2. Take a pre-printed label and stick it on the device
-3. Type the label code (e.g. `PETZONE001/2026`) in the input field, or use the **barcode scanner** button in the top menu to scan it with your camera
+3. Scan the label using one of three methods:
+   - Click the **barcode icon** next to the input field to open the camera scanner
+   - Use a **USB barcode scanner** (keyboard-wedge) — it types the code and submits automatically when the input is focused
+   - Type the label code manually (e.g. `PETZONE001/2026`)
 4. Press **Link** — the system links the label to the booking and moves it to Undergoing
 5. You'll see a green confirmation message
+6. Your admin receives a notification, and if enabled, the customer receives a confirmation email
 
 ### If you make a mistake
 

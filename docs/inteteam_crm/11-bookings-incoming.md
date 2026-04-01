@@ -8,7 +8,11 @@ This is your inbox for new repair jobs. Every booking starts here.
 
 ## What You See
 
-A table of all bookings in the **Incoming** stage. Use the search box and assignee filter to find specific bookings.
+A table of all bookings in the **Incoming** stage. Use the filters to narrow down:
+
+- **Filter by status** — show only bookings with a specific status (your custom statuses)
+- **Filter by team member** — show only bookings assigned to a specific person
+- **Search** — search by booking ID, name, email, or phone
 
 Each row shows the booking ID, customer, date, priority, status, and task progress.
 
