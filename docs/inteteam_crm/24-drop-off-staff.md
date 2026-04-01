@@ -85,6 +85,40 @@ You can switch between light and dark mode from the user menu (click your name/a
 
 ---
 
+## Admin: Managing Drop-Off Schedules
+
+Admins can set opening hours for each drop-off point:
+
+1. Go to **Settings > Drop-Off Points**
+2. Click the **clock icon** next to a drop-off point
+3. Set opening hours for each day (same interface as location business hours)
+4. Save
+
+These hours are used by booking forms linked to the drop-off point.
+
+---
+
+## Admin: Booking Forms for Drop-Off Points
+
+Admins can create booking forms tied to a specific drop-off point:
+
+1. Create or clone a booking form
+2. Set the **drop-off point** instead of a location
+3. Choose whether the scheduler shows **before** or **after** customer details
+4. Embed on your website — customers book at the drop-off point's schedule
+
+---
+
+## Admin: Reassigning a Booking
+
+If a customer needs to go to a different drop-off:
+
+1. Open the booking detail page
+2. Under **Drop-Off Point**, use the dropdown to select a new location
+3. The booking is instantly reassigned
+
+---
+
 ## Support
 
 Click the chat icon in the bottom corner for AI-powered help, or contact your admin for assistance.
