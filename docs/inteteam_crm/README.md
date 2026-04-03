@@ -31,6 +31,9 @@ User-facing documentation for the InteTeam CRM Admin role. Admins have full acce
 - [22 - Printer Setup](22-printer-setup.md) — Stations, printers, drivers
 - [23 - Print Bridge](23-print-bridge.md) — Windows/Linux installation
 
+### Drop-Off Partners
+- [24 - Drop-Off Staff Guide](24-drop-off-staff.md) — Receiving devices, scanning labels, collection, admin setup
+
 ### 4. Inventory
 - [30 - Simple Products](30-simple-products.md) — Products for storefront
 - [31 - Parts Stock](31-parts-stock.md) — Parts catalog, categories, specs

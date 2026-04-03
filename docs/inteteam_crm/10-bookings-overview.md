@@ -42,12 +42,13 @@ Each booking list (Incoming, Undergoing, Completed) shows a table with:
 
 ### Searching & Filtering
 
-At the top of the list:
+At the top of every booking list (Incoming, Undergoing, Completed):
 
+- **Status filter** — dropdown to show only bookings with a specific status (e.g. "Waiting for parts"). Shows a coloured dot next to each status name. Select "All statuses" to clear the filter.
 - **Assignee filter** — show only bookings assigned to a specific team member
 - **Search box** — search by booking ID, customer name, email, or phone
 
-On mobile, these stack vertically below the page title.
+Filters work together — you can combine status + assignee + search to narrow down exactly what you need. On mobile, these stack vertically below the page title.
 
 ### Row Actions
 
