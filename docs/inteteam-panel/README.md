@@ -26,12 +26,12 @@ Hosting control panel for managing InteTeam infrastructure and customer onboardi
 
 ## Customer Onboarding Flow (Admin)
 
-1. Customer created via CRM webhook or manually in panel
-2. Panel provisions LXC/VM, deploys Docker, configures NPM + DNS
-3. Admin sets `dns_provider` (cloudflare or ovh) and `email_setup` (mailu, resend, or both)
-4. Admin uses "Domain & Email" card buttons to trigger DNS and email setup
-5. Resend domain verification runs automatically (5min polling, up to 10 retries)
-6. Mailu mailbox provisioned when email module is enabled (planned)
+1. Create customer (manually or via CRM webhook) — set name, email, domain, DNS provider, email setup
+2. **Step 1 — Setup DNS:** Enter target IP in the "A Record IP" field, click "Setup DNS" → creates A record
+3. **Step 2 — Setup Email DNS:** Click "Setup Email DNS" → creates MX, SPF, DMARC records
+4. **Verify:** Click "Verify DNS" → confirms all records with green/red badges and action hints for any failures
+5. (Optional) Setup Resend for transactional email — runs automatically (5min polling, up to 10 retries)
+6. (Planned) Mailu mailbox provisioned when email module is enabled
 
 ## DNS Providers
 
@@ -55,17 +55,21 @@ Both implement the same `DnsProvider` interface — the panel picks the right on
 ### DNS Verification
 
 "Verify DNS" button on customer detail page fetches live records from the provider and shows:
-- Pass/fail badges for A, MX, SPF, DMARC
+- Pass/fail badges for A, MX, SPF, DMARC — each with step number
+- Action hints on failing checks (e.g. "← Use Setup DNS with target IP above")
+- "All DNS records verified" message when everything passes
 - Full records table with type, name, content, TTL
 
 Also available as JSON at `GET /customers/{id}/dns-records` — designed for PA/RAG agent task completion verification.
 
-### First Customer Onboarded via OVH
+### Customers Onboarded (2026-04-04)
 
-SAT SYSTEM BTC (satsystembtc.co.uk) — Maciej's satellite & CCTV business. Successfully onboarded 2026-04-04:
-- A record → 62.31.81.187 (Dell public IP)
-- MX, SPF, DMARC records created
-- All four DNS checks pass
+| Customer | Domain | Provider | Status |
+|----------|--------|----------|--------|
+| SAT SYSTEM BTC (Maciej) | satsystembtc.co.uk | OVH | All 4 checks green (A, MX, SPF, DMARC) |
+| Piotr Ficner (test) | inteteam.co.uk | Cloudflare | MX, SPF, DMARC green (A record not needed) |
+
+Both DNS providers verified working end-to-end.
 
 ## Notes
 
