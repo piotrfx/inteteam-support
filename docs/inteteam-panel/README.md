@@ -42,15 +42,23 @@ Both implement the same `DnsProvider` interface — the panel picks the right on
 
 ### What DNS Setup Creates
 
-**Setup DNS** (A Record):
+**Step 1 — Setup DNS** (A Record):
 - Adds `A` record pointing domain to specified IP address
 - Admin enters IP manually, or auto-fills from active module
 
-**Setup Email DNS** (MX, SPF, DMARC):
-- `MX` → `email.inteteam.co.uk.` (Mailu shared host)
-- `TXT` (SPF) → `v=spf1 mx a:email.inteteam.co.uk ~all`
-- `TXT` (DMARC) → `v=DMARC1; p=quarantine; rua=mailto:postmaster@{domain}`
-- DKIM added separately when Mailu is configured
+**Step 2 — Setup Email DNS** (MX, SPF, DKIM, DMARC):
+- Deletes ALL old records first (OVH defaults, legacy SPF)
+- `MX` → `mail.ficner.co.uk` (Mailu shared host, priority 10)
+- `TXT` (SPF) → `v=spf1 mx a:mail.ficner.co.uk ip4:62.31.81.187 ~all`
+- `TXT` (DKIM) → `dkim._domainkey.{domain}` — paste public key from Mailu admin
+- `TXT` (DMARC) → `v=DMARC1; p=reject; adkim=s; aspf=s`
+
+**Step 3 — Setup Mailu** (domain + mailbox):
+- Creates domain in shared Mailu instance via API
+- Creates `info@{domain}` mailbox with generated password
+- Password shown in flash message (save it!)
+
+**DKIM key:** Generated in Mailu admin UI → domain detail → Generate keys. Paste the `p=...` value into the Setup Email DNS form.
 
 ### DNS Verification
 
@@ -64,12 +72,12 @@ Also available as JSON at `GET /customers/{id}/dns-records` — designed for PA/
 
 ### Customers Onboarded (2026-04-04)
 
-| Customer | Domain | Provider | Status |
-|----------|--------|----------|--------|
-| SAT SYSTEM BTC (Maciej) | satsystembtc.co.uk | OVH | All 4 checks green (A, MX, SPF, DMARC) |
-| Piotr Ficner (test) | inteteam.co.uk | Cloudflare | MX, SPF, DMARC green (A record not needed) |
+| Customer | Domain | Provider | Email | Status |
+|----------|--------|----------|-------|--------|
+| SAT SYSTEM BTC (Maciej) | satsystembtc.co.uk | OVH | info@satsystembtc.co.uk | All 5 checks green, Gmail delivery verified |
+| Piotr Ficner (test) | inteteam.co.uk | Cloudflare | — | MX, SPF, DMARC green |
 
-Both DNS providers verified working end-to-end.
+Full pipeline verified: Panel → Mailu (domain + mailbox) → DNS (MX, SPF, DKIM, DMARC) → Gmail delivery working.
 
 ## Notes
 
