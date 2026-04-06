@@ -4,7 +4,7 @@
 
 Hosting control panel for managing InteTeam infrastructure and customer onboarding. Used by InteTeam internal team.
 
-**Status:** Live at `panel.inteteam.co.uk` on Dell R550 (port 8000, behind NPM).
+**Status:** Live at `panel.inte.team` on Contabo 8GB (port 8000, behind NPM). Cold standby on Dell R550.
 
 ---
 
