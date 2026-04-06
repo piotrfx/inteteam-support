@@ -22,6 +22,12 @@ Each company can use one of two email providers. Only one is active at a time.
 
 The selected tab becomes your active provider. Your previous provider's credentials are kept — you can switch back at any time without re-entering them.
 
+### Automatic SMTP Setup (via InteTeam Panel)
+
+If your email was provisioned via the InteTeam Panel (Setup Mailu button), **your CRM email settings are configured automatically** — no manual entry needed. The Panel pushes SMTP credentials to the CRM via a secure webhook. You'll see the SMTP tab already active with all fields filled in.
+
+This happens automatically when the Panel admin clicks "Setup Mailu" for your company.
+
 ### If SMTP stops working
 
 1. Go to **Settings -> Email**

@@ -34,7 +34,7 @@ Hosting control panel for managing InteTeam infrastructure and customer onboardi
 
 1. **Add Customer** — name, email (personal), domain, DNS provider (OVH/Cloudflare), email setup (mailu/resend/both)
 2. **Setup DNS** — enter target IP, click button → creates/updates A record
-3. **Setup Mailu** — click button → creates domain + info@ mailbox in Mailu, stores encrypted credentials, sends welcome email to customer's personal email
+3. **Setup Mailu** — click button → creates domain + info@ mailbox in Mailu, stores encrypted credentials, sends welcome email to customer's personal email, **auto-configures CRM email settings** (SMTP provider + credentials pushed via webhook)
 4. **Generate DKIM** — in Mailu admin → domain detail → Generate keys → copy the p=... key
 5. **Setup Email DNS** — paste DKIM key, click button → deletes old records, creates MX/SPF/DKIM/DMARC
 6. **Verify DNS** — click button → all 5 checks green (A, MX, SPF, DKIM, DMARC)
