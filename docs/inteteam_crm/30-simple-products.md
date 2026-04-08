@@ -125,3 +125,25 @@ You'll see:
 - Small imports (under 50 products) process instantly
 - Large imports (50+) run in the background — a progress bar shows completion. Give it some time and refresh the page.
 - When done, you'll see a summary: how many were created, updated, skipped, and any errors
+
+---
+
+## Bulk Import Tips
+
+When importing large numbers of products (hundreds or thousands), keep these in mind:
+
+### Before you start
+
+1. **Check which company you're logged into.** The import assigns all products to whichever company your account is currently switched to. If you manage multiple companies, go to your company switcher and confirm you're on the right one before uploading.
+2. **Check for duplicate catalogue numbers (MPN).** The system enforces unique MPN per company. If your spreadsheet has the same catalogue number more than once (e.g. multiple copies of the same vinyl record at different prices), make each MPN unique by adding a suffix: `pcs7096`, `pcs7096-2`, `pcs7096-3`, etc.
+
+### During import
+
+- **Batch size:** The import handles large files (1000+ rows) in the background. You'll see a progress bar — let it finish before importing the next batch.
+- **Re-importing the same file** is safe. The system detects duplicates by MPN and skips them (or updates, depending on your choice). This means you can use the same CSV multiple times — it will only create the new rows.
+
+### After import
+
+- **Verify the count.** Check the product list and make sure the total matches what you expected.
+- **Storefront cache.** If your products don't appear on the storefront immediately, wait 5 minutes for the cache to refresh, or ask your admin to clear the application cache.
+- **Categories.** If your CSV contains a category that doesn't exist yet, the import creates it automatically. Check your category list afterwards to make sure the names are correct.
