@@ -28,9 +28,12 @@ The forms index page shows all your booking forms with:
 
 1. Click **Create Form**
 2. Choose a **custom form** (built in Business -> CMS -> Forms) — this defines the fields
-3. Choose a **location** — where the booking will be assigned
-4. Give the form a name and description
-5. Save
+3. Choose a **scheduler type**: **Location** or **Drop-Off Point**
+   - If you have drop-off points set up, you'll see a radio toggle to switch between the two
+   - Select the specific location or drop-off point from the dropdown
+4. Choose **Scheduler Position**: whether the date/time picker appears before or after the customer's details
+5. Give the form a name and description
+6. Save
 
 The system generates an embed code you can paste into your website:
 
@@ -54,7 +57,7 @@ The system generates an embed code you can paste into your website:
 ## Editing a Form
 
 1. Click **Edit** on the form
-2. Change the name, description, linked form, or location
+2. Change the name, description, linked form, location/drop-off point, or scheduler position
 3. Save
 
 Changes apply immediately — the embed code stays the same.

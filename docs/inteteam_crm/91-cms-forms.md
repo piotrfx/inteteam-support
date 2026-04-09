@@ -31,9 +31,20 @@ View all your forms with name, status, and submission count.
 
 ---
 
-## Linking to Bookings
+## Linking to Bookings & Scheduling
 
-Forms can be linked to the booking system so that form submissions automatically create bookings. See [Booking Forms](16-booking-forms.md) for details.
+Forms can create bookings automatically when submitted:
+
+1. In the **Scheduling** section, toggle **Create Booking on Submit**
+2. Toggle **Enable Scheduler** to let customers pick appointment times
+3. Choose **Booking Mode**: Time Slots (specific times) or Whole Day (date only)
+4. Choose **Scheduler**: select a **Location** or **Drop-Off Point** — this controls which opening hours are used for availability
+5. Choose **Scheduler Position**: show available slots before or after the customer fills in their details
+6. Save
+
+For drop-off point forms, the confirmation email includes a barcode that customers show at the partner location for identification.
+
+See also [Booking Forms](16-booking-forms.md) for the embeddable booking widget (wraps a CMS form + scheduler into one).
 
 ---
 

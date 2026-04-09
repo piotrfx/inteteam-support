@@ -12,6 +12,7 @@ A table of all bookings in the **Incoming** stage. Use the filters to narrow dow
 
 - **Filter by status** — show only bookings with a specific status (your custom statuses)
 - **Filter by team member** — show only bookings assigned to a specific person
+- **Filter by location** — show only bookings from a specific branch or drop-off point (only appears if you have multiple locations or drop-off points)
 - **Search** — search by booking ID, name, email, or phone
 
 Each row shows the booking ID, customer, date, priority, status, and task progress.

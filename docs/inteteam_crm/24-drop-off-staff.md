@@ -30,11 +30,13 @@ Below the stats, you'll see a list of today's expected customers with their name
 
 ## Receiving a Device (Scan & Receive)
 
-When a customer arrives with a device:
+When a customer arrives with a device, they should have a **confirmation email with a barcode**. This barcode identifies their booking without needing to ask for personal details (GDPR-friendly).
 
 1. Go to **Receive** (from the navbar or dashboard button)
-2. Take a pre-printed label and stick it on the device
-3. Scan the label using one of three methods:
+2. Ask the customer to show their confirmation email barcode
+3. Scan the barcode — the system identifies their booking
+4. Take a pre-printed label and stick it on the device
+5. Scan the label using one of three methods:
    - Click the **barcode icon** next to the input field to open the camera scanner
    - Use a **USB barcode scanner** (keyboard-wedge) — it types the code and submits automatically when the input is focused
    - Type the label code manually (e.g. `PETZONE001/2026`)
@@ -70,6 +72,33 @@ When a customer comes to collect a repaired device:
 - Today's expected visits for your drop-off point only
 - Completed items ready for collection
 
+## Managing Your Opening Hours
+
+You can adjust your own drop-off point's opening hours:
+
+1. Go to **Hours** from the nav bar
+2. Toggle each day on/off and set open/close times
+3. Add break times if needed
+4. Click **Save Changes**
+
+Changes take effect immediately — customers won't be able to book slots outside your hours.
+
+---
+
+## Managing Your Holidays
+
+Add closures so customers can't book when you're shut:
+
+1. Go to **Holidays** from the nav bar
+2. Click **Add Holiday**
+3. Enter a name (e.g. "Bank Holiday Monday") and date
+4. Toggle **Recurring annually** if it repeats every year
+5. Click **Create**
+
+Company-wide holidays set by the repair shop admin are shown but can't be edited by you.
+
+---
+
 ## What You Cannot Access
 
 - Admin settings, scheduler, invoicing
@@ -89,12 +118,12 @@ You can switch between light and dark mode from the user menu (click your name/a
 
 Admins can set opening hours for each drop-off point:
 
-1. Go to **Settings > Drop-Off Points**
+1. Go to **Settings > Scheduler > Drop-Off Points**
 2. Click the **clock icon** next to a drop-off point
 3. Set opening hours for each day (same interface as location business hours)
 4. Save
 
-These hours are used by booking forms linked to the drop-off point.
+Drop-off staff can also manage their own hours and holidays from their dashboard (see above). These hours are used by booking forms linked to the drop-off point.
 
 ---
 

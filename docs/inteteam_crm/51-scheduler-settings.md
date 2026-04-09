@@ -1,6 +1,6 @@
 # Scheduler Settings
 
-Configure locations, business hours, and holidays for your scheduler.
+Configure locations, drop-off points, business hours, and holidays for your scheduler.
 
 **Settings -> Scheduler tab**
 
