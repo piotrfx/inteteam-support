@@ -13,7 +13,7 @@ Guides for end-customers who use the self-service portal to check bookings, view
 | Role | Access | Description |
 |------|--------|-------------|
 | **Guest** | Login page only | Anyone visiting the portal before signing in |
-| **Customer** | Full portal | Authenticated customer (logged in via OTP) |
+| **Customer** | Full portal | Authenticated customer (logged in via SSO, OTP, or password) |
 
 ## Guides
 
